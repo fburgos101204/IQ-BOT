@@ -1,0 +1,7 @@
+env
+*.env
+node_modules
+iqoption
+iqoption_app
+*iqoption
+*iqoption_app

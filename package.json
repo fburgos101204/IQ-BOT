@@ -1,0 +1,38 @@
+{
+  "name": "IQ-Options",
+  "version": "1.0.0",
+  "description": "Las apis de IQ Options",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config src/index.js dotenv_config_path=env/local.env"
+  },
+  "author": "Fernando Burgos",
+  "license": "ISC",
+  "dependencies": {
+    "@deriv/deriv-api": "^1.0.12",
+    "@iamtraction/google-translate": "github:iamtraction/google-translate",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "console-emoji": "^0.0.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "ejtraderiq": "^1.0.0",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "express-validator": "^7.0.1",
+    "free-translate": "^0.6.1",
+    "gender-detection": "^0.1.0",
+    "iqoption": "^1.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mathjs": "^11.8.2",
+    "mssql": "^7.3.5",
+    "mysql": "^2.18.1",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.21",
+    "reflect-metadata": "^0.1.13",
+    "request": "^2.88.2",
+    "ws": "^8.13.0"
+  }
+}
