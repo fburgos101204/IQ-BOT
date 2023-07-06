@@ -22,8 +22,7 @@ function myAuthorizer(username, password) {
 
 // Ejecutar Scrapping
 //cron.schedule('*/3 * * * *', async () => {
-const run = require('./domains/iq/controller.js');
-await run.testFunctions()
+
 //});
   
 function getUnauthorizedResponse(req) {
@@ -31,5 +30,10 @@ function getUnauthorizedResponse(req) {
 }
 
 app.use('/api', apiRouter);
+
+async () => {
+    const run = require('./domains/iq/controller.js');
+    await run.testFunctions()
+}
 
 module.exports = app
