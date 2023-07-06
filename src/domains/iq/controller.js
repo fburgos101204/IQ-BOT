@@ -53,7 +53,8 @@ exports.testFunctions = async (req, res) => {
           let valores = await Binary.get_velas(par, 60);
           let ema12 = await Binary.calculate_ema(valores['close'], 2);
           let emaLenta = await Binary.calculate_ema(valores['close'], 10);
-          let macd = ema12.map((value, index) => value - emaLenta[index]);
+          //let macd = ema12.map((value, index) => value - emaLenta[index]);
+          let macd = emaLenta.map((value, index) => value - ema12[index]);
           let rsi = await Binary.calculateRSI(valores['close']);
 
           // Condiciones operaciones       

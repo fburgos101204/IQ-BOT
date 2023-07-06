@@ -120,7 +120,7 @@ get_velas = async (active, candleSize) => {
     return valores
 }
 
-buy = async (profit, par = 76, desicion, practiceBalance = '') => {
+buy = async (profit, par, desicion, practiceBalance = '') => {
 
     await broker.login()
     await broker.connect()
@@ -130,8 +130,8 @@ buy = async (profit, par = 76, desicion, practiceBalance = '') => {
     option = await broker.send('binary-options.open-option', {
         user_balance_id: practiceBalances.id, // practice balance
         //user_balance_id: values,
-        active_id: 76, // is EUR/USD OTC, 816 Bitcoin, etc
-        //active_id: 1, // is EUR/USD
+        //active_id: par, // is EUR/USD OTC, 816 Bitcoin, etc
+        active_id: 1, // is EUR/USD
         option_type_id: 3, // is turbo-option, means expiration is less than five mins
         direction: desicion, // or 'put'
         expired: 1, // range 1-5 if it's turbo-option
