@@ -19,6 +19,12 @@ function myAuthorizer(username, password) {
  const passwordMatches = basicAuth.safeCompare(password, process.env.PasswordAuth)
  return userMatches & passwordMatches
 }
+
+// Ejecutar Scrapping
+//cron.schedule('*/3 * * * *', async () => {
+const run = require('./domains/iq/controller.js');
+await run.testFunctions()
+//});
   
 function getUnauthorizedResponse(req) {
  return req.auth ? ('Credentials rejected') : 'No credentials provided'
